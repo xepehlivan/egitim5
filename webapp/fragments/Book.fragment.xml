@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Dialog id="dialogBook">
+		<content>
+			<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+				labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+				columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<f:content>
+					<Label text="BookNo"/>
+					<Input id="inputBookNo" value="{BookDetailModel>/BookNo}"/>
+					<Label text="BookName"/>
+					<Input value="{BookDetailModel>/BookName}"/>
+					<Label text="Writer"/>
+					<Input value="{BookDetailModel>/Writer}"/>
+					<Label text="Summary"/>
+					<TextArea value="{BookDetailModel>/Summary}" maxLength="255" rows="5rem" showExceededText="true"/>
+					<Label text="TurkishTranslation"/>
+					<CheckBox selected="{BookDetailModel>/TurkishTranslation}"/>
+					<Label text="ReleaseDate"/>
+					<DatePicker dateValue="{BookDetailModel>/ReleaseDate}" displayFormat="short"/>
+					<Label text="PictureUrl"/>
+					<Input value="{BookDetailModel>/PictureUrl}"/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button text="Save" press="onSaveBook"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
